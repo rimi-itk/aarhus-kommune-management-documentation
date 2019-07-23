@@ -1,0 +1,34 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "users"
+  ],
+  "properties": {
+    "users": {
+      "$id": "#/properties/users",
+      "type": "object",
+      "title": "The Users Schema",
+      "properties": {
+        "create": {
+          "$id": "#/properties/users/properties/create",
+          "type": "array",
+          "title": "The Create Schema"
+        },
+        "update": {
+          "$id": "#/properties/users/properties/update",
+          "type": "array",
+          "title": "The Update Schema"
+        },
+        "delete": {
+          "$id": "#/properties/users/properties/delete",
+          "type": "array",
+          "title": "The Delete Schema"
+        }
+      }
+    }
+  }
+}

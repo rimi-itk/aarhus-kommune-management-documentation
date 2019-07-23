@@ -1,0 +1,186 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://example.com/root.json",
+	"type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "uuid"
+  ],
+  "properties": {
+    "uuid": {
+      "$id": "#/properties/uuid",
+      "type": "string",
+      "title": "The Uuid Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "rights": {
+      "$id": "#/properties/rights",
+      "type": "array",
+      "title": "The Rights Schema",
+      "items": {
+        "$id": "#/properties/rights/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "DG-Right-Kontrolsystem-Admin",
+          "DG-Right-Kontrolsystem-Sagsbehandler"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "az-ident": {
+      "$id": "#/properties/az-ident",
+      "type": "string",
+      "title": "The Az-ident Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "email-address": {
+      "$id": "#/properties/email-address",
+      "type": "string",
+      "title": "The Email-address Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "first-name": {
+      "$id": "#/properties/first-name",
+      "type": "string",
+      "title": "The First-name Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "last-name": {
+      "$id": "#/properties/last-name",
+      "type": "string",
+      "title": "The Last-name Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "display-name": {
+      "$id": "#/properties/display-name",
+      "type": "string",
+      "title": "The Display-name Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "telephone": {
+      "$id": "#/properties/telephone",
+      "type": "string",
+      "title": "The Telephone Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "image": {
+      "$id": "#/properties/image",
+      "type": "string",
+      "title": "The Image Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "employments": {
+      "$id": "#/properties/employments",
+      "type": "array",
+      "title": "The Employments Schema",
+      "items": {
+        "$id": "#/properties/employments/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "is-primary",
+          "job-title",
+          "department"
+        ],
+        "properties": {
+          "is-primary": {
+            "$id": "#/properties/employments/items/properties/is-primary",
+            "type": "boolean",
+            "title": "The Is-primary Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "job-title": {
+            "$id": "#/properties/employments/items/properties/job-title",
+            "type": "string",
+            "title": "The Job-title Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "department": {
+            "$id": "#/properties/employments/items/properties/department",
+            "type": "object",
+            "title": "The Department Schema",
+            "required": [
+              "uuid",
+              "parent-uuid",
+              "name"
+            ],
+            "properties": {
+              "uuid": {
+                "$id": "#/properties/employments/items/properties/department/properties/uuid",
+                "type": "string",
+                "title": "The Uuid Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "parent-uuid": {
+                "$id": "#/properties/employments/items/properties/department/properties/parent-uuid",
+                "type": "string",
+                "title": "The Parent-uuid Schema",
+                "default": "",
+                "examples": [
+                  ""
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/employments/items/properties/department/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "ITK Development"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

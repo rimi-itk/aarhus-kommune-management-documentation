@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "uuid": "user:1",
+      "email": "admin@example.com"
+    },
+    {
+      "uuid": "user:2",
+      "email": "test@example.com"
+    }
+  ]
+}

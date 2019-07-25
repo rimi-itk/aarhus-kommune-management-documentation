@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+const argv = require('yargs')
+      .usage('Usage: $0 --schema [path or url] documents…')
+      .count('verbose')
+      .alias('v', 'verbose')
+      .demandOption('schema')
+      .demandCommand(1)
+      .argv
+const $RefParser = require("json-schema-ref-parser")
+const Validator = require('jsonschema').Validator
+const JSONReader = require('jsonfile')
+
+const schemaPath = argv.schema
+const documentPaths = argv._
+
+VERBOSE_LEVEL = argv.verbose;
+
+function WARN()  { VERBOSE_LEVEL >= 0 && console.log.apply(console, arguments); }
+function INFO()  { VERBOSE_LEVEL >= 1 && console.log.apply(console, arguments); }
+function DEBUG() { VERBOSE_LEVEL >= 2 && console.log.apply(console, arguments); }
+
+INFO('Loading schema ' + schemaPath)
+$RefParser.dereference(schemaPath, (err, schema) => {
+    if (err) {
+        console.error(err)
+    }
+    else {
+        const v = new Validator()
+
+        documentPaths.forEach(path => {
+            console.log(path)
+            const document = JSONReader.readFileSync(path)
+            const result = v.validate(document, schema)
+            if (result.valid) {
+                console.log('OK')
+            } else {
+                console.log('NOT OK')
+                result.errors.forEach(error => console.log(error))
+            }
+        })
+    }
+})

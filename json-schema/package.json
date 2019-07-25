@@ -1,0 +1,17 @@
+{
+  "name": "aarhus-kommune-management-documentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rimi-itk/aarhus-kommune-management-documentation",
+  "author": "Mikkel Ricky <rimi@aarhus.dk>",
+  "license": "MIT",
+  "dependencies": {
+    "json-schema-ref-parser": "^7.1.0",
+    "jsonfile": "^5.0.0",
+    "jsonschema": "^1.2.4",
+    "yargs": "^13.3.0"
+  },
+  "scripts": {
+    "validate": "node validate.js"
+  }
+}

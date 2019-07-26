@@ -68,6 +68,8 @@ The response must validate against the schema [`users.get.schema.json`](json-sch
 
 `POST /aarhus-kommune-management/users`
 
+Example request:
+
 ```sh
 curl http://example.com/aarhus-kommune-management/users' \
         --header "authorization: Bearer «access_token from result above»" \
@@ -87,6 +89,8 @@ JSON
 ```
 
 The request body must validate against the schema [`users.update.schema.json`](json-schema/schema/users.update.schema.json).
+
+@TODO What must the response look like?
 
 ## Implementations
 

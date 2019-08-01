@@ -96,3 +96,9 @@ The request body must validate against the schema [`users.update.schema.json`](j
 
 * [https://github.com/rimi-itk/aarhus-kommune-management-bundle](https://github.com/rimi-itk/aarhus-kommune-management-bundle)
 * [https://github.com/rimi-itk/aarhus-kommune-management-drupal](https://github.com/rimi-itk/aarhus-kommune-management-drupal)
+
+## Challenges
+
+How do we connect a user that's been created in Drupal to a user from
+Brugeropslag? In Loop, users can register via ADFS, but then we don't know their
+uuid – or do we?

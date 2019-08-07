@@ -27,15 +27,15 @@ opdatering eller sletning af brugere via api'et og detaljerne er helt op til
 implementeringen.
 
 En snedig implementering vil ved `create` kunne tjekke om der allerede findes en
-bruger på sitet som matcher den (fra Brugerstyrings synspunkt set) nye bruger, og
+bruger på sitet som matcher den (fra Brugerstyrings synspunkt set) nye bruger og
 så knytte `uuid`'et til den allerede eksisterende bruger. Dette kræver
 naturligvis at der findes et andet unikt id som man kan bruge til at
-identificere en bruger, og `email-address` (eller `az-ident`) er oplagte
+identificere en bruger, og `email-address` eller `az-ident` er oplagte
 kandidater.
 
 ## Indledende knæbøjninger
 
 Når Brugerstyring aktiveres på et site bør alle eksisterende brugere (som skal
-styres af Brugerstyring) tilknyttes deres respektive `uuid`, fx ud fra
+styres af Brugerstyring) tilknyttes deres respektive `uuid`’er, fx ud fra
 e-mailadresse eller az-ident. Dette håndteres mere eller mindre manuelt, dvs. vi
 laver ikke automatik/funktionalitet til at håndtere denne engangsforeteelse.

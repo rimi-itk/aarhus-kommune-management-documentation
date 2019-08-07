@@ -1,5 +1,7 @@
 # aarhus-kommune-management-documentation
 
+Se [Brugerstyring](README.da.md).
+
 ## Endpoints
 
 ### Authentication
@@ -11,12 +13,12 @@ Example request:
 
 ```sh
 curl https://example.com/aarhus-kommune-management/authenticate \
-        --header "content-type: application/x-www-form-urlencoded" \
-        --header "Accept: 1.0" \
-        --data-urlencode "grant_type=client_credentials" \
-        --data-urlencode "client_id=x-IqP7h3AwVnrkibFSUkJagziN0eCFPLjkA8jntJSB-7E" \
-        --data-urlencode "client_secret=eqbJ8oOzXp37lNnwTiy3GpA_mWe24Bx-9bcha_O6g_4" \
-        --data-urlencode "scope=data:write"
+    --header "content-type: application/x-www-form-urlencoded" \
+    --header "Accept: 1.0" \
+    --data-urlencode "grant_type=client_credentials" \
+    --data-urlencode "client_id=x-IqP7h3AwVnrkibFSUkJagziN0eCFPLjkA8jntJSB-7E" \
+    --data-urlencode "client_secret=eqbJ8oOzXp37lNnwTiy3GpA_mWe24Bx-9bcha_O6g_4" \
+    --data-urlencode "scope=data:write"
 ```
 
 Example response:
@@ -42,7 +44,8 @@ This will make it much simpler to use the api.
 Example request:
 
 ```sh
-curl http://example.com/aarhus-kommune-management/users' --header "authorization: Bearer «access_token from result above»"
+curl http://example.com/aarhus-kommune-management/users' \
+    --header "authorization: Bearer «access_token from result above»"
 ```
 
 Example response:
@@ -62,7 +65,11 @@ Example response:
 }
 ```
 
-The response must validate against the schema [`users.get.schema.json`](json-schema/schema/users.get.schema.json).
+The response must validate against the schema
+[`users.get.schema.json`](json-schema/schema/users.get.schema.json).
+
+**Note**: Only users that are managed by aarhus-kommune-management, i.e. ones
+with an `uuid`, must be returned in the response.
 
 #### Update users
 
@@ -89,7 +96,8 @@ curl http://example.com/aarhus-kommune-management/users' \
 JSON
 ```
 
-The request body must validate against the schema [`users.update.schema.json`](json-schema/schema/users.update.schema.json).
+The request body must validate against the schema
+[`users.update.schema.json`](json-schema/schema/users.update.schema.json).
 
 @TODO What must the response look like?
 

@@ -52,11 +52,11 @@ Example response:
   "data": [
     {
       "uuid": "user:1",
-      "email": "admin@example.com"
+      "email-address": "admin@example.com"
     },
     {
       "uuid": "user:2",
-      "email": "test@example.com"
+      "email-address": "test@example.com"
     }
   ]
 }
@@ -80,7 +80,8 @@ curl http://example.com/aarhus-kommune-management/users' \
     "update": [
       {
         "uuid": "user:1",
-        "name": "Admin Jensen"
+        "first-name": "Admin",
+        "last-name": "Admin"
       }
     ]
   }

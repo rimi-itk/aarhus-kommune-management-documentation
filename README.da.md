@@ -2,7 +2,7 @@
 
 ## Oprettelse, opdatering og sletning af brugere
 
-Det første tanke med Brugerstyring var at systemet med jævne mellemrum, fx en
+Den første tanke med Brugerstyring var at systemet med jævne mellemrum, fx en
 gang i døgnet, skulle oprette, opdatere eller slette brugere på registrerede
 sites ved første at bruge “get users” til at finde ud af hvilke brugere der er
 aktive på et givet site og derefter finde ud af hvilke bruge der skal
